@@ -1,0 +1,14 @@
+{
+  "_note": "APPROXIMATE placeholder rates (local currency units per 1 USD). The Hive export has IPT in local currency, so GMV is converted with these. Replace with the finance rates (g_caiwu.dim_currency_rate_di) before trusting money figures. Edit and the backend picks it up on the next request. Countries not listed are treated as already in USD.",
+  "local_per_usd": {
+    "MX": 18.5,
+    "CO": 4000,
+    "AR": 1400,
+    "CL": 950,
+    "PE": 3.6,
+    "CR": 505,
+    "DO": 63,
+    "EC": 1,
+    "PA": 1
+  }
+}

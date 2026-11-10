@@ -1,0 +1,32 @@
+# --- secrets: never commit ---
+.env
+.env.*
+!.env.example
+
+# --- real data (driver base, uploaded query results, block lists) ---
+backend/data/
+*.parquet
+prueba.csv
+prueba.csv.bak
+# only the synthetic sample files are meant to be shared
+sample_data/*
+!sample_data/SYNTHETIC_*.csv
+
+# --- backups / logs ---
+*.bak
+*.log
+
+# --- python ---
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# --- node / next (frontend/.gitignore covers most of it too) ---
+node_modules/
+.next/
+*.tsbuildinfo
+
+# --- the frontend used to be its own git repo (create-next-app); its old history is kept here, untracked ---
+frontend/.git-nested-backup/

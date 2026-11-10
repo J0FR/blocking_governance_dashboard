@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f5f6f8;
+  --panel: #ffffff;
+  --panel-2: #f9fafb;
+  --line: #e4e7ec;
+  --text: #101828;
+  --muted: #667085;
+  --accent: #2459d6;
+  --accent-soft: #e8efff;
+  --red: #c9302c;
+  --red-soft: #fdecea;
+  --yellow: #a15c07;
+  --yellow-soft: #fef3d6;
+  --green: #0b7a4b;
+  --green-soft: #e3f6ec;
+  --temp: #2459d6;   /* temporary blocks */
+  --perm: #b4235a;   /* permanent blocks */
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-panel: var(--panel);
+  --color-panel2: var(--panel-2);
+  --color-line: var(--line);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accentsoft: var(--accent-soft);
+  --color-danger: var(--red);
+  --color-warn: var(--yellow);
+  --color-ok: var(--green);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: light;
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth; /* nav-bar anchors glide instead of jumping */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04);
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+.th {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb { background: #d0d5dd; border-radius: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
